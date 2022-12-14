@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Oooh+Baby&family=Poppins:wght@600&family=Roboto:wght@100&family=Sedgwick+Ave&display=swap");
+nav {
+  height: 80px;
+  color: #fff;
+}
+
+.navContainer a h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: #fff;
+}
+
+.navContainer {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItem {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navInput {
+  display: none;
+}
+
+.navLabel {
+  display: block;
+  cursor: pointer;
+}
+
+.navMenu {
+  position: absolute;
+  top: 80px;
+  bottom: 0;
+  background-color: #004481;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  -webkit-clip-path: circle(0 at center);
+          clip-path: circle(0 at center);
+  transition: -webkit-clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out;
+  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+}
+
+/*Si navInput esta check su adyacente cambia*/
+.navInput:checked + .navMenu {
+  -webkit-clip-path: circle(100% at center);
+          clip-path: circle(100% at center);
+}
+
+.cpi img {
+  width: 200px;
+  margin: 10px;
+}
+
+.redes img {
+  width: 40px;
+}
+
+.contactData img, .contactData a {
+  height: 30px;
+}
+
+.ubicacion, .cpi {
+  text-align: center;
+}
+
+.ubicacion img {
+  margin: 15px 0 15px;
+  width: 90%;
+}
+
+.contactData p {
+  width: auto;
+  line-height: 1.6em;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0;
+}
+
+.contactData {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-template-rows: 60px 60px 60px;
+  align-items: center;
+  justify-items: start;
+  justify-content: center;
+  text-align: initial;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*mobile first 0px-500px*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  color: #121212;
+  background-color: #fff;
+  line-height: 1.6em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  background-color: #004481;
+  padding: 20px;
+}
+
+.tituloPagina {
+  text-align: center;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+hr {
+  margin: 0;
+  opacity: 100%;
+}
+
+/*Encabezado*/
+.encabezado, footer {
+  background-color: #072146;
+  color: #fff;
+}
+
+.caratula {
+  background-blend-mode: multiply;
+  background-image: url("../images/panoramicacordoba.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3137254902);
+}
+
+.caratula h1 {
+  color: #e5eec1;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: 5px;
+}
+
+/*nosotros.html*/
+.nosotros article p {
+  text-align: justify;
+}
+
+.nosotros span {
+  display: block;
+  text-align: center;
+}
+
+.nosotros article, .nosotros img {
+  width: 90%;
+  margin: 5%;
+}
+
+/*servicios.html*/
+.serviciosContainer {
+  display: grid;
+  gap: 15px;
+  padding: 2em 1em;
+  background-color: #1973b8;
+  margin: 20px 0;
+}
+
+.serviciosBox {
+  background-color: #1464a5;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+  line-height: 1.75rem;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/*inmuebles.html*/
+.galeriaPropiedades {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-items: center;
+  margin: 15px;
+}
+
+.acercar img {
+  width: 100%;
+}
+
+.propiety {
+  background-color: antiquewhite;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+}
+
+.propiety h2 {
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.5em;
+}
+
+.propiety h2, .direccionPropiedad, .contenedorDetalles {
+  margin: 0.5rem;
+}
+
+.contenedorDetalles {
+  text-align: initial;
+  margin-bottom: 1rem;
+}
+
+.detallePropiedad {
+  background-color: #3a3548;
+  color: aliceblue;
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+/* declaro las grid área */
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.caratula {
+  grid-area: caratula;
+}
+
+/* grilla general */
+.encabezado {
+  gap: 5px;
+  display: grid;
+  grid-template-areas: "header" "nav" "caratula" "footer";
+}
+
+/*500px en adelante*/
+@media (min-width: 500px) {
+  .encabezado {
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header   header" "nav      nav" "caratula caratula" "footer   footer";
+    grid-template-columns: 1fr 3fr;
+  }
+  .redes {
+    justify-content: center;
+  }
+  .redes img {
+    margin: 0px 15px;
+  }
+  .caratula h1 {
+    font-size: 60px;
+    line-height: 150px;
+    letter-spacing: 15px;
+  }
+  .galeriaPropiedades {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .envoltura {
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-areas: "header   header   header" "nav      nav      nav" "caratula caratula caratula" "footer   footer   footer";
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  .ubicacion {
+    grid-area: mapa;
+  }
+  .contactData {
+    grid-area: contacto;
+  }
+  .redes {
+    grid-area: redes;
+  }
+  footer {
+    display: grid;
+    grid-template-areas: "mapa   contacto" "cpi    redes";
+    grid-template-columns: 55% 44%;
+    align-items: center;
+  }
+  .navLabel {
+    display: none;
+  }
+  .navMenu {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 3em;
+    position: relative;
+    background-color: #072146;
+    transition: none;
+    -webkit-clip-path: none;
+            clip-path: none;
+    top: 0;
+  }
+  .navItem {
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  .navItem::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    -webkit-clip-path: var(--clippy);
+            clip-path: var(--clippy);
+    transition: -webkit-clip-path 0.5s;
+    transition: clip-path 0.5s;
+    transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+  }
+  .navItem:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    color: #fff;
+  }
+  .galeriaPropiedades {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .acercar {
+    overflow: hidden;
+  }
+  .acercar img {
+    transition: all 2s;
+  }
+  .acercar img:hover {
+    transform: scale(1.5);
+  }
+  .nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .serviciosContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    grid-template-areas: "null   mapa   contacto" "redes  redes  redes";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  .ubicacion img {
+    height: 180px;
+    width: auto;
+  }
+  .galeriaPropiedades {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .nosotros {
+    grid-template-columns: 1fr 2fr;
+  }
+}/*# sourceMappingURL=style.css.map */

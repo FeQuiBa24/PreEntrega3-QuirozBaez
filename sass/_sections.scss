@@ -1,0 +1,112 @@
+.tituloPagina{
+    text-align: center;
+    margin: 1em;
+    font-size: 1.5em;
+}
+hr{
+    margin: 0;
+    opacity: 100%;
+}
+/*nosotros.html*/
+.nosotros{
+    img, article{
+        width: 90%;
+        margin: 5%;
+        p{
+            text-align: justify;
+        }
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include desktop{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+/*servicios.html*/
+.serviciosContainer{
+    display: grid;
+    gap: 15px;
+    padding: 2em 1em;
+    background-color: #1973b8;
+    margin: 20px 0;
+    @include tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .serviciosBox{
+        background-color: #1464a5;
+        color: #fff;
+        text-align: center;
+        padding: 1.5em;
+        line-height: 1.75rem;
+        word-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+}
+
+/*inmuebles.html*/
+.galeriaPropiedades{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:15px;
+    justify-items: center;
+    margin: 15px;
+    @include smartphone{
+        grid-template-columns: 1fr 1fr;
+    }
+    @include tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include desktop{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .propiety{
+        background-color: antiquewhite;
+        border: 1px solid #000000;
+        border-radius: .25rem;
+        .acercar{
+            @include tablet{
+                overflow: hidden;
+                img{
+                    transition: all 2s;
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+        h2{
+            font-weight: 500;
+            line-height: 1.2;
+            font-size: 1.5em;
+        }
+        .contenedorDetalles{
+            text-align: initial;
+            margin-bottom: 1rem;
+            .detallePropiedad{
+                background-color: #3a3548;
+                color: aliceblue;
+                padding: 0.2em 0.5em;
+                display: inline-block;
+                margin: .25rem;
+            }
+        }
+        h2, .direccionPropiedad, .contenedorDetalles{
+            margin: .5rem;
+        }
+    }
+}
+
+
+
+

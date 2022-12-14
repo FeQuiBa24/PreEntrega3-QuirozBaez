@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@mixin desktop{
+    @media(min-width:1024px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media(min-width: 768){
+        @content;
+    }
+}
+@mixin smartphone{
+    @media(min-width:500px){
+        @content;
+    }
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    color: #121212;
+    background-color: #fff;
+    line-height: 1.6em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .encabezado{
+        background-color: #072146;
+        color: #fff;
+        /*grilla general*/
+        gap: 5px;
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "caratula"
+        "footer";
+        header{
+            grid-area: header;
+        }
+    }
+}
+a{
+    text-decoration: none;
+}
+.caratula{
+    grid-area: caratula;
+    background-blend-mode: multiply;
+    background-image: url('../images/panoramicacordoba.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    background-color: #00000050;
+    h1{
+        color: #e5eec1;
+        font-size: 50px;
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: 5px;
+        @include smartphone{
+            font-size: 60px;
+            line-height: 150px;
+            letter-spacing: 15px;
+        }
+    }
+}
+form{
+    background-color: #004481;
+    padding: 20px;
+}
